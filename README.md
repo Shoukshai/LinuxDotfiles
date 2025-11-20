@@ -11,13 +11,11 @@
 - [Status](#Status)
 
 ## Roadmap
-- [x] Find a good wallpaper
-- [x] Find a tiling window manager
-- [x] Colors/Background/Hyprland
-- [x] Nvidia Drivers
-- [ ] Web Browser
-- [x] Auto cpupower
-- [ ] Launcher/Bar
+- [x] Nvidia drivers + Hyrpland
+- [x] Awww + Wallust
+- [ ] Waybar
+- [ ] Dunst
+- [ ] Launcher (Still not decided)
 - [ ] NeoVim
 - [ ] Install.sh
 
@@ -27,40 +25,39 @@ I will start to work on this project again, the "first version" was a complete m
 This "dotfile" is made for me and MY laptop, Im too lazy to figure out for other resolutions/ppl
 
 ## Applications [**TBD**]
+### Aur
+- Paru
+
 ### Window Managers
 - Hyprland
 
-### Terminal Applications
-- [Kitty](https://github.com/kovidgoyal/kitty) (probably)
-- [btop](https://github.com/aristocratos/btop) (CLI process manager)
-- [ani-cli](https://github.com/pystardust/ani-cli) (CLI anime browser)
-- NeoVim (CLI text editor)
-- FastFetch (info displayer)
-- cpupower
-```bash
-sudo cpupower frequency-set -u 3.4GHz
-```
+### Hyprland Ecosysteme
+- Hyprlock
+- Hyprpaper
+- Hyprcursor
+- xdg-desktop-portal-hyprland
+
+### Apps
+- Alacritty
+- neovim
+- librewolf
+- waybar
+- dunst
+
+### Audio
+- pipewire, wireplumber, pipewire-alsa, pipewire-pulse, pipewire-jack, pipewire-audio
 
 ### Utilities
-- Hyprlock (lock session)
-- Hyprpaper (wallpaper)
-- tofi (probably the launcher)
 - eza (Better ls)
-- librewolf (Web browser)
-
-### Sound managment
-- pipewire wireplumber pipewire-alsa pipewire-pulse alsa-utils alsamixer(?) (Sound managment)
-[(This could help if I encounter issues)](https://wiki.radioreference.com/index.php/ALSA)
-```bash
-alsamixer
-```
+- btop
 
 ### Others [**TBD/NOT INSTALLED**]
-- mangohud (Perf overlay)
-- wl-clipboard (Clipboard manager?)
+- wl-clipboard
+- wallust/awww
+- nerdfonts
 
 > [!Note]
-> I have no fucking clue how the iGPU and dGPU works on linux, I Have to look into that
+> I have no fucking clue how the iGPU and dGPU works on linux, perhaps nvidia-prime?
 
 ## **Status:**
 > [!Warning]
