@@ -1,0 +1,5 @@
+set_wallpaper = false
+
+wallpaper_dir = "~/.config/wallpapers/"
+
+post_command = "~/.config/hypr/scripts/wallpaper_update.sh"
