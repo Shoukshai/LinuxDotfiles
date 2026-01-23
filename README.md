@@ -50,6 +50,7 @@ This "dotfile" is made for me and MY laptop, Im too lazy to figure out for other
 ### Utilities
 - eza (Better ls)
 - btop
+- alsamixer (audio config)
 
 ### Others [**TBD/NOT INSTALLED**]
 - wl-clipboard
@@ -57,8 +58,8 @@ This "dotfile" is made for me and MY laptop, Im too lazy to figure out for other
 - nerdfonts
 
 > [!Note]
-> I have no fucking clue how the iGPU and dGPU works on linux, perhaps nvidia-prime?
+> I disable my igpu but It dosen't really matters and any issue is not my problem
 
 ## **Status:**
 > [!Warning]
-> **UNDER BIG RENOVATION**, **NOT USABLE AT ALL**. Please check back later or feel free to contribute if you'd like to help out.
+> **UNDER BIG RENOVATION**, Please check back later or feel free to contribute if you'd like to help out.
