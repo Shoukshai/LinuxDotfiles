@@ -1,20 +1,61 @@
-/* ,-,--.  ,--.--------.                            ,----.  
- ,-.'-  _\/==/,  -   , -\,--.-.  .-,--. _.-.     ,-.--` , \ 
-/==/_ ,_.'\==\.-.  - ,-./==/- / /=/_ /.-,.'|    |==|-  _.-` 
-\==\  \    `--`\==\- \  \==\, \/=/. /|==|, |    |==|   `.-. 
- \==\ -\        \==\_ \  \==\  \/ -/ |==|- |   /==/_ ,    / 
- _\==\ ,\       |==|- |   |==|  ,_/  |==|, |   |==|    .-'  
-/==/\/ _ |      |==|, |   \==\-, /   |==|- `-._|==|_  ,`-._ 
-\==\ - , /      /==/ -/   /==/._/    /==/ - , ,/==/ ,     / 
+/* ,-,--.  ,--.--------.                            ,----.
+ ,-.'-  _\/==/,  -   , -\,--.-.  .-,--. _.-.     ,-.--` , \
+/==/_ ,_.'\==\.-.  - ,-./==/- / /=/_ /.-,.'|    |==|-  _.-`
+\==\  \    `--`\==\- \  \==\, \/=/. /|==|, |    |==|   `.-.
+ \==\ -\        \==\_ \  \==\  \/ -/ |==|- |   /==/_ ,    /
+ _\==\ ,\       |==|- |   |==|  ,_/  |==|, |   |==|    .-'
+/==/\/ _ |      |==|, |   \==\-, /   |==|- `-._|==|_  ,`-._
+\==\ - , /      /==/ -/   /==/._/    /==/ - , ,/==/ ,     /
  `--`---'       `--`--`   `--`-`     `--`-----'`--`-----``  */
+@import url("colors.css");
 
 window#waybar {
-	background-color: rgba(50, 50, 50, 0.6);
-	color: #ffffff;
+    background-color: alpha(@c0, 0.7);
+    border-radius: 0px;
+    border-top: 2px solid #FFFFFF;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#custom-shutdown {
+    background-color: alpha(@c4, 0.7);
+    color: #FFFFFF;
+
+    padding: 4px 10px;
+    border-radius: 10px;
+}
+
+#custom-spacer {
+    padding: 0px 1px 0px;
+}
+
+#workspaces button {
+    background-color: transparent;
+    color: #FFFFFF;
+
+    padding: 4px 7px;
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+    background-color: alpha(@c4, 0.3);
+}
+
+#workspaces button.active {
+    background-color: alpha(@c4, 0.7);
+    color: #FFFFFF;
+}
+
+#clock {
+    background-color: alpha(@c4, 0.7);
+    color: #FFFFFF;
+
+    padding: 4px 10px;
 }
 
 * {
-	padding: 0 10px;
-	border-radius: 20px;
-	background: rgba(255, 90, 120, 0.2);
+    font-family: "CaskaydiaCove Nerd Font";
+    font-weight: bold;
+    border-radius: 10px;
 }
