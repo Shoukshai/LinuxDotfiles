@@ -17,6 +17,7 @@ Made for myself so it's not guarantees to works for other setups.
 ~/.config/mpv/mpv.conf           -> mpv/mpv.conf
 ~/.config/awww/                  -> awww/
 ~/.config/wallust/wallust.toml   -> wallust/wallust.toml
+~/.config/Wallpapers             -> Wallpapers/
 ```
 
 ## Stack
@@ -55,6 +56,7 @@ cp btop/btop.conf ~/.config/btop/btop.conf
 cp mpv/mpv.conf ~/.config/mpv/mpv.conf
 cp -r awww/ ~/.config/awww/
 cp wallust/wallust.toml ~/.config/wallust/wallust.toml
+cp -r Wallpapers/ ~/.config/Wallpapers
 ```
 
 > [!Note]
