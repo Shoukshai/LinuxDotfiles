@@ -18,20 +18,4 @@ yt_mp3() { yt-dlp -x --audio-format mp3 --audio-quality 0 "$1"; }
 (~/.config/awww/last_scheme.sh &) 2>/dev/null
 export PATH="$HOME/.local/bin:$PATH"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/Shouk/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/Shouk/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/Shouk/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/Shouk/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
 alias jupyter='bash $HOME/miniconda3/launch_jupyter.sh'
