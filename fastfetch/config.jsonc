@@ -1,0 +1,90 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  /* "logo": {
+    "source": "/home/Shouk/.config/fastfetch////",
+    "type": "file",
+    "width": 38,
+    "height": 19
+  }, */
+  "display": {
+    "separator": " > ",
+    "color": {
+      "keys": "blue",
+      "title": "cyan"
+    }
+  },
+  "modules": [
+    "title",
+    "separator",
+    {
+      "type": "os",
+      "key": " OS"
+    },
+    {
+      "type": "host",
+      "key": " Host"
+    },
+    {
+      "type": "kernel",
+      "key": " Kernel"
+    },
+    {
+      "type": "uptime",
+      "key": " Uptime"
+    },
+    {
+      "type": "packages",
+      "key": " Packages"
+    },
+    {
+      "type": "shell",
+      "key": " Shell"
+    },
+    {
+      "type": "display",
+      "key": " Display"
+    },
+    {
+      "type": "wm",
+      "key": " WM"
+    },
+    {
+      "type": "terminal",
+      "key": " Terminal"
+    },
+    {
+      "type": "cpu",
+      "key": " CPU"
+    },
+    {
+      "type": "gpu",
+      "key": " GPU"
+    },
+    {
+      "type": "memory",
+      "key": " RAM"
+    },
+    {
+      "type": "disk",
+      "key": " Disk '/'",
+      "folders": "/"
+    },
+    {
+      "type": "disk",
+      "key": " Disk '/home'",
+      "folders": "/home"
+    },
+    {
+      "type": "localip",
+      "key": " Local IP",
+      "showIpv4": true,
+      "showIpv6": false
+    },
+    {
+      "type": "locale",
+      "key": " Locale"
+    },
+    "break",
+    "colors"
+  ]
+}

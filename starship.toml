@@ -1,0 +1,25 @@
+format = "[❀](#f4b8e4) $username [❀](#f4b8e4) [❯](bold #6e6a86) $directory\n$character"
+
+[username]
+format = "[$user]($style)"
+style_user = "bold #f4b8e4"
+show_always = true
+
+[directory]
+format = "[$path]($style) "
+style = "bold #c9a0dc"
+truncation_length = 4
+truncation_symbol = "…/"
+
+[character]
+success_symbol = "[◈](bold #c9a0dc) [❯](#f4b8e4)"
+error_symbol = "[◈](bold red) [❯](bold red)"
+
+[git_branch]
+disabled = true
+
+[git_status]
+disabled = true
+
+[cmd_duration]
+disabled = true

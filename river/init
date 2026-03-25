@@ -1,0 +1,88 @@
+#!/bin/bash
+
+# Binds
+riverctl map normal Super Return spawn kitty
+riverctl map normal Super Escape exit
+riverctl map normal Super+Shift Q close
+
+riverctl map normal Super l spawn librewolf
+riverctl map normal Super p spawn prismlauncher
+riverctl map normal Super k spawn 'dbus-run-session kdenlive'
+riverctl map normal Super+Shift K spawn 'dbus-run-session shotcut'
+riverctl map normal Super s spawn steam
+
+riverctl map normal Super ampersand   set-focused-tags 1
+riverctl map normal Super eacute      set-focused-tags 2
+riverctl map normal Super quotedbl    set-focused-tags 4
+riverctl map normal Super apostrophe  set-focused-tags 8
+riverctl map normal Super parenleft   set-focused-tags 16
+riverctl map normal Super minus       set-focused-tags 32
+riverctl map normal Super egrave      set-focused-tags 64
+riverctl map normal Super underscore  set-focused-tags 128
+riverctl map normal Super ccedilla    set-focused-tags 256
+
+riverctl map normal Super+Shift ampersand   set-view-tags 1
+riverctl map normal Super+Shift eacute      set-view-tags 2
+riverctl map normal Super+Shift quotedbl    set-view-tags 4
+riverctl map normal Super+Shift apostrophe  set-view-tags 8
+riverctl map normal Super+Shift parenleft   set-view-tags 16
+riverctl map normal Super+Shift minus       set-view-tags 32
+riverctl map normal Super+Shift egrave      set-view-tags 64
+riverctl map normal Super+Shift underscore  set-view-tags 128
+riverctl map normal Super+Shift ccedilla    set-view-tags 256
+
+riverctl map-pointer normal Super BTN_LEFT move-view
+riverctl map-pointer normal Super BTN_RIGHT resize-view
+
+riverctl map normal Super Space toggle-float
+
+# Focus / swap navigation
+riverctl map normal Super Left  focus-view previous
+riverctl map normal Super Right focus-view next
+riverctl map normal Super+Shift Left  swap-focused-view previous
+riverctl map normal Super+Shift Right swap-focused-view next
+
+# Rivertile: main ratio and count
+riverctl map normal Super Up   send-layout-cmd rivertile "main-ratio +0.05"
+riverctl map normal Super Down send-layout-cmd rivertile "main-ratio -0.05"
+riverctl map normal Super+Control Up   send-layout-cmd rivertile "main-count +1"
+riverctl map normal Super+Control Down send-layout-cmd rivertile "main-count -1"
+
+riverctl map normal Super w spawn "~/.config/awww/awww_cycle.sh"
+riverctl map normal None Print spawn 'grim ~/Screenshots/$(date +"%Y%m%d_%Hh%Mm%Ss_grim.png")'
+riverctl map normal Super+Shift Print spawn 'grim -g "$(slurp)" ~/Screenshots/$(date +"%Y%m%d_%Hh%Mm%Ss_grim.png")'
+
+# Wallpaper
+riverctl background-color 0x000000
+
+# Mouse
+riverctl input pointer-13159-6500-Endgame_Gear_Endgame_Gear_OP1_8k_Gaming_Mouse accel-profile flat
+riverctl input pointer-13159-6500-Endgame_Gear_Endgame_Gear_OP1_8k_Gaming_Mouse pointer-accel 0
+riverctl input pointer-13159-6500-Endgame_Gear_Endgame_Gear_OP1_8k_Gaming_Mouse_Keyboard accel-profile flat
+riverctl input pointer-13159-6500-Endgame_Gear_Endgame_Gear_OP1_8k_Gaming_Mouse_Keyboard pointer-accel 0
+
+# Touchpad
+for touchpad in $(riverctl list-inputs | grep -i touchpad | awk '{print $1}'); do
+    riverctl input "$touchpad" natural-scroll enabled
+    riverctl input "$touchpad" tap enabled
+done
+
+riverctl focus-follows-cursor always
+
+# Keyboard
+riverctl keyboard-layout fr
+
+# Screen
+wlr-randr --output eDP-1 --mode 2560x1600,240
+
+# Layout
+rivertile &
+riverctl default-layout rivertile
+
+
+# Apps
+vesktop &
+awww-daemon & 
+
+# Default Wallpaper
+~/.config/awww/last_scheme.sh &

@@ -1,65 +1,64 @@
-# Shouk's Hyprland Dotfile
+# Shouk's Linux Dotfiles
 
-![Under Renovation](https://img.shields.io/badge/Under%20Renovation-red?style=flat)
 ![Arch Linux](https://img.shields.io/badge/-Arch%20Linux-1793D1?logo=arch-linux&logoColor=white)
-![Neovim](https://img.shields.io/badge/Neovim-57A143?logo=neovim&logoColor=white&style=flat)
+![River](https://img.shields.io/badge/River-WM-5e81ac?style=flat)
+![Wayland](https://img.shields.io/badge/Wayland-ffb86c?style=flat)
 
-## Table of contents
-- [Roadmap](#Roadmap)
-- [Important](#Important)
-- [Applications](#Applications)
-- [Status](#Status)
+Personal rice running on Arch Linux with the River window manager.
+Made for my specific machine — no guarantees for other setups.
 
-## Roadmap
-- [x] Nvidia drivers + Hyrpland
-- [x] Awww + Wallust
-- [ ] Waybar
-- [ ] Dunst
-- [ ] Launcher (Still not decided)
-- [ ] NeoVim
-- [ ] Install.sh
+## Structure
 
-## Important
-I will start to work on this project again, the "first version" was a complete mess.
+```
+~/.bashrc                        → .bashrc
+~/.bash_profile                  → .bash_profile
+~/.bash_logout                   → .bash_logout
+~/.config/starship.toml          → starship.toml
+~/.config/river/init             → river/init
+~/.config/kitty/kitty.conf       → kitty/kitty.conf
+~/.config/fastfetch/config.jsonc → fastfetch/config.jsonc
+~/.config/btop/btop.conf         → btop/btop.conf
+~/.config/mpv/mpv.conf           → mpv/mpv.conf
+~/.config/awww/                  → awww/
+~/.config/wallust/wallust.toml   → wallust/wallust.toml
+```
 
-This "dotfile" is made for me and MY laptop, Im too lazy to figure out for other resolutions/ppl
+## Stack
 
-## Applications [**TBD**]
-### Aur
-- Paru
+| Role           | Tool                                                                  |
+|----------------|-----------------------------------------------------------------------|
+| Window Manager | [River](https://codeberg.org/river/river)                             |
+| Terminal       | [Kitty](https://sw.kovidgoyal.net/kitty/)                             |
+| Shell Prompt   | [Starship](https://starship.rs)                                       |
+| Fetch          | [Fastfetch](https://github.com/fastfetch-cli/fastfetch)               |
+| Wallpaper      | [awww](https://github.com/heapbytes/awww)                             |
+| Theming        | [Wallust](https://codeberg.org/explosion-mental/wallust)              |
+| System Monitor | [btop](https://github.com/aristocratos/btop)                          |
+| Video Player   | [mpv](https://mpv.io)                                                 |
+| Browser        | Librewolf                                                             |
+| Audio          | Pipewire + Wireplumber                                                |
 
-### Window Managers
-- Hyprland
+## Wallpaper cycling
 
-### Hyprland Ecosysteme
-- Hyprlock
-- Hyprpaper
-- Hyprcursor
-- xdg-desktop-portal-hyprland
+Wallpapers are cycled with `Super+W` via `awww_cycle.sh`, which also runs wallust to regenerate the color scheme.
+Place wallpapers in `~/.config/Wallpapers/` named `screen*.png/jpg`.
 
-### Apps
-- Alacritty
-- neovim
-- librewolf
-- waybar
-- dunst
+## Install
 
-### Audio
-- pipewire, wireplumber, pipewire-alsa, pipewire-pulse, pipewire-jack, pipewire-audio
+No install script yet — link or copy each file to its target path manually.
 
-### Utilities
-- eza (Better ls)
-- btop
-- alsamixer (audio config)
-
-### Others [**TBD/NOT INSTALLED**]
-- wl-clipboard
-- wallust/awww
-- nerdfonts
+```bash
+cp .bashrc ~/.bashrc
+cp .bash_profile ~/.bash_profile
+cp starship.toml ~/.config/starship.toml
+cp river/init ~/.config/river/init
+cp kitty/kitty.conf ~/.config/kitty/kitty.conf
+cp fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
+cp btop/btop.conf ~/.config/btop/btop.conf
+cp mpv/mpv.conf ~/.config/mpv/mpv.conf
+cp -r awww/ ~/.config/awww/
+cp wallust/wallust.toml ~/.config/wallust/wallust.toml
+```
 
 > [!Note]
-> I disable my igpu but It dosen't really matters and any issue is not my problem
-
-## **Status:**
-> [!Warning]
-> **UNDER BIG RENOVATION**, Please check back later or feel free to contribute if you'd like to help out.
+> This setup is tailored to my hardware (2560x1600 @ 240Hz, NVIDIA + AMD iGPU). YMMV.
